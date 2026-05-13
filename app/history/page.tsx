@@ -122,7 +122,7 @@ export default function Home() {
   const [error, setError] = useState('');
   const [loadMsg, setLoadMsg] = useState('');
   const [pdfLoading, setPdfLoading] = useState(false);
-  const intervalRef = useRef<ReturnType<typeof setInterval>>();
+  const intervalRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
 
   const analyze = async () => {
     const trimmed = url.trim();
